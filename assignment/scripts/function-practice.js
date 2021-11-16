@@ -62,9 +62,24 @@ console.log('test getLast', getLast (artists));
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find( value, array ){
-  
-}
+function find( value, artists ) {
+  for (let i = 0; i < artists.length; i++) {
+    if (artists[i] === value) {
+      return true;
+    } 
+  }
+    return false;
+  }
+
+console.log(find ('Houndmouth', artists))
+console.log(find ('Madi Diaz', artists))
+console.log(find ('Twin Shadow', artists))
+console.log(find ('Polica', artists))
+console.log(find ('Rostam', artists))
+console.log(find ('Hippo Campus', artists))
+console.log(find ('Courtney Barnett', artists))
+
+//Could you use a forEach for this?
 
 // ----------------------
 // Stretch Goals
@@ -72,12 +87,17 @@ function find( value, array ){
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+  if (string[0] === letter) {
+    return true;
+  } else {
+    return false;
+  }
 }
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
+let numArray =  [16, 50, 4, 21, 32]
 function sumAll( ) {
   let sum = 0
   // TODO: loop to add items
