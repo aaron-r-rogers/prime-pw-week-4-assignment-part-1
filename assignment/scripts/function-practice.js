@@ -98,16 +98,34 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
 let numArray =  [16, 50, 4, 21, 32]
-function sumAll( ) {
-  let sum = 0
+function sumAll(numArray) {
+  let sum = 0;
+  for (i = 0; i < numArray.length; i++) {
+    sum = numArray[i] + sum;
+  }
   // TODO: loop to add items
   return sum;
 }
+console.log(sumAll(numArray));
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 
+let numHundred = [1, -2, 3, -4, 5, -6, 7, -8, 9, -10];
+let newArray = [];
+
+function positive(array) {
+  for (i = 0; i < array.length; i++) {
+    if (array[i] > 0) {
+      newArray.push(array[i]);
+    }
+  }
+}
+positive(numHundred);
+
+console.log(`First array: ${numHundred}`)
+console.log(`New array: ${newArray}`)
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
