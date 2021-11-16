@@ -53,11 +53,11 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 //    array is empty, return `undefined`.
 let artists = [ 'Madi Diaz', 'Twin Shadow', 'Polica', 'Hippo Campus', 'Rostam' ];
 
-function getLast( artists ) {
-  return artists[ artists.length - 1] || undefined
+function getLast(artists) {
+  return artists[artists.length - 1] || undefined
     } 
 
-console.log('test', getLast ());
+console.log('test getLast', getLast (artists));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
